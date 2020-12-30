@@ -127,5 +127,12 @@
       }
     }
   },
-  "defaultProject": "refactoring-gp"
+  "defaultProject": "refactoring-gp",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "changeDetection": "OnPush"
+      }
+    }
+  }
 }
