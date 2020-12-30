@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'page-one',
-    loadChildren: () => import('./page-one/page-one.module').then(m => m.PageOneModule)
+    loadChildren: () => import('./page-one/page-one.module').then(m => m.PageOneModule),
   },
   {
     path: 'page-two',

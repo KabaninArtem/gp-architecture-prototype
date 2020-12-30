@@ -1,6 +1,6 @@
 <p>page-navigation works!</p>
 <nav fxLayout="column">
-  <a [routerLink]="['/page-one']">Page One</a>
-  <a [routerLink]="['/page-two']">Page Two</a>
-  <a [routerLink]="['/page-three']">Page Three</a>
+  <a [routerLink]="['/page-one']" queryParamsHandling="merge">Page One</a>
+  <a [routerLink]="['/page-two']" queryParamsHandling="merge">Page Two</a>
+  <a [routerLink]="['/page-three']" queryParamsHandling="merge">Page Three</a>
 </nav>
