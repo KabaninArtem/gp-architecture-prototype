@@ -16,9 +16,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.routeQueryParams.queryParamsSource$.subscribe((params: QueryParams) => {
+      console.log('params - ', params);
       const actions: QueryParamsActions = this.routeQueryParams.actions;
+      console.log('actions - ', actions);
       for (const paramKey in params) {
         if (params.hasOwnProperty(paramKey)) {
+          console.log('paramKey - ', paramKey);
+          console.log('actions[paramKey] - ', actions[paramKey]);
           actions[paramKey](params[paramKey]);
         }
       }

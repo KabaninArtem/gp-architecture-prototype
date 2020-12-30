@@ -29,7 +29,8 @@ export class ActiveAoiService {
     this.activeAoiSource$.next(aoi);
   }
 
-  public setActiveAoiId(id: number): void {
+  public setActiveAoiId = (id: number): void => {
+    console.log('id - ', id);
     this.activeAoiIdSource$.next(id);
   }
 

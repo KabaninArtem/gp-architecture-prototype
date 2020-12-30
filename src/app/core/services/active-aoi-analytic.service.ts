@@ -16,7 +16,7 @@ export class ActiveAoiAnalyticService {
     return this.activeAoiAnalyticSource$.getValue();
   }
 
-  public setActiveAoiAnalyticId(id: number): void {
+  public setActiveAoiAnalyticId = (id: number): void => {
     this.activeAoiAnalyticSource$.next(id);
   }
 
