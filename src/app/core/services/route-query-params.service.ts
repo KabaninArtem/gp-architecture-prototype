@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {QueryParams} from '../interfaces/query-params';
 import {QueryParamsActions} from '../interfaces/query-params-actions';
 import {ActiveAoiService} from './active-aoi.service';
 import {ActiveAoiAnalyticService} from './active-aoi-analytic.service';
+import { omitBy } from 'lodash-es';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class RouteQueryParamsService {
 
   public pushParams(params: QueryParams): void {
     this.router.navigate([], {queryParams: {...this.getParams(), ...params}});
+  }
+
+  public deleteParam(paramKey: string): void {
+    this.router.navigate([], {queryParams: omitBy(this.getParams(), (value, key) => key === paramKey)});
   }
 
   public getParams(): QueryParams  {

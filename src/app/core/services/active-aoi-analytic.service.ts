@@ -19,4 +19,8 @@ export class ActiveAoiAnalyticService {
   public setActiveAoiAnalyticId(id: number): void {
     this.activeAoiAnalyticSource$.next(id);
   }
+
+  public resetActiveAoiAnalyticId(): void {
+    this.setActiveAoiAnalyticId(0);
+  }
 }

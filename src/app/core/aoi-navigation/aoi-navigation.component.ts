@@ -10,7 +10,7 @@ import {Observable} from 'rxjs';
   styleUrls: ['./aoi-navigation.component.scss']
 })
 export class AoiNavigationComponent implements OnInit {
-  public readonly aoiList$: Observable<object[]> = this.activeAoiService.getAoiList$();
+  public readonly aoiList$: Observable<{id: number, name: string}[]> = this.activeAoiService.getAoiList$();
   constructor(private readonly activeAoiService: ActiveAoiService, private readonly routeQueryParamsService: RouteQueryParamsService) { }
 
   ngOnInit(): void {

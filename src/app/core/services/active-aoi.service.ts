@@ -37,7 +37,7 @@ export class ActiveAoiService {
     return of({});
   }
 
-  public getAoiList$(): Observable<object[]> {
+  public getAoiList$(): Observable<{id: number, name: string}[]> {
     return of([{id: 1, name: 'AOI 1'}, {id: 2, name: 'AOI 2'}, {id: 3, name: 'AOI 3'}]);
   }
 }
