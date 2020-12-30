@@ -1,1 +1,12 @@
-<p>aoi-analytic works!</p>
+<ng-container [ngSwitch]="activeId$ | async">
+  <app-analytic-one *ngSwitchCase="ids.ANALYTIC_ONE"></app-analytic-one>
+  <app-analytic-two *ngSwitchCase="ids.ANALYTIC_TWO"></app-analytic-two>
+  <app-analytic-three *ngSwitchCase="ids.ANALYTIC_THREE"></app-analytic-three>
+  <app-analytic-four *ngSwitchCase="ids.ANALYTIC_FOUR"></app-analytic-four>
+  <app-analytic-five *ngSwitchCase="ids.ANALYTIC_FIVE"></app-analytic-five>
+  <app-analytic-six *ngSwitchCase="ids.ANALYTIC_SIX"></app-analytic-six>
+  <app-analytic-seven *ngSwitchCase="ids.ANALYTIC_SEVEN"></app-analytic-seven>
+  <app-analytic-eight *ngSwitchCase="ids.ANALYTIC_EIGHT"></app-analytic-eight>
+  <app-analytic-nine *ngSwitchCase="ids.ANALYTIC_NINE"></app-analytic-nine>
+  <ng-container *ngSwitchDefault></ng-container>
+</ng-container>
