@@ -10,7 +10,10 @@ import {ActiveAoiAnalyticService} from '../../core/services/active-aoi-analytic.
 })
 export class PageOneComponent implements OnInit, OnDestroy {
 
-  constructor(private readonly routeQueryParamsService: RouteQueryParamsService, private readonly activeAoiAnalyticService: ActiveAoiAnalyticService) { }
+  constructor(
+    private readonly routeQueryParamsService: RouteQueryParamsService,
+    private readonly activeAoiAnalyticService: ActiveAoiAnalyticService
+  ) { }
 
   ngOnInit(): void {
   }
